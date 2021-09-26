@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block scripts%}
+   <script src="{%static '/main.js' %}" defer></script>
+{% endblock scripts%}
+{%block title%} 
+{{obj.name}}
+{%endblock title%}
+{% block stylesheet %}
+   <link rel="stylesheet" href="{% static '/style.css' %}"/>
+{% endblock %}
+{%block content%}
+ <link rel="stylesheet" href="ECOM/static/style.css"/>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+  
+   <a class="navbar-brand" id="one" href="">TREN-G~</a>
+  <div class="container">
+    <a class="navbar-brand" href="">
+      <img src="/ECOM/static/web.jpg" alt="" width="50" height="50" id="two">
+    </a>
+  </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/about">About</a>
+  <a href="Services">Services</a>
+  <a href="/ts">Terms & Condition</a>
+  <a href="/contact">Contact</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/trending">Trending</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/tshirt">New Arrivals</a>
+          <a class="dropdown-item" href="/trending">Trending</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/tshirt">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/discount">Big Sale</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/discount">Discounts</a>
+      </li>
+    </ul>
+    <a href="">Add To Cart<img src="/ECOM/static/cart.png" alt="" width="50" height="50" id="two"></a>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Items</button>
+    </form>
+  </div>
+</nav>
+<h3 id="h2">Choose from variety of range</h3>
+<div class="card-group mx-50" id="card">
+  <div class="card">
+    <img class="card-img-top" src="ECOM/static/img1.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+      <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+ <div class="card">
+    <img class="card-img-top" src="ECOM/static/img2.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+       <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+ <div class="card">
+    <img class="card-img-top" src="ECOM/static/img3.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+     <button id="btn1">Add To Cart</button>
+      <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+  </div>
+  <div class="card-group mx-50" id="card">
+  <div class="card">
+    <img class="card-img-top" src="ECOM/static/img4.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+      <button id="btn2"> Buy Now</button>
+    </div>
+  </div>
+ <div class="card">
+    <img class="card-img-top" src="ECOM/static/imgss3.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+       <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+ <div class="card">
+    <img class="card-img-top" src="ECOM/static/imgs1.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+     <button id="btn1">Add To Cart</button>
+      <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+  </div>
+  <div class="card-group" id="card">
+ <div class="card">
+    <img class="card-img-top" src="ECOM/static/imgs1.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+     <button id="btn1">Add To Cart</button>
+      <button id="btn2"> Buy Now</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="ECOM/static/imgs1.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+         <button id="btn2">Buy Now</button>
+
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="ECOM/static/imgs1.jpg" alt="Card image cap" height="270px">
+    <div class="card-body" style="background-color:#F8F8F8;">
+      <h7 class="card-title">FROM Diseny</h7>
+      <p class="card-text">Price Rs 499.</p>
+      <button id="btn1">Add To Cart</button>
+         <button id="btn2">Buy Now</button>
+    </div>
+  </div>
+  </div>
+  <a href="/tshirt"><h6 id="btn">MORE</h6></a>
+  <hr  class="bg-light">
+  <!-- Footer -->
+<footer class="page-footer font-small bg-dark pt-4" id="card1">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h6 id="footer" class="font-weight-bold text-uppercase mt-3 mb-4">Our site use secure payment gatewsys.All major credit and debit cards are accepted.</h6>
+        <p id="footer">Free Shipping On All Prepaid Orders Over Rs 499.</p>
+        <p id="footer">COD is available to most part of India.</p>
+        <p id="footer">Easy 15 Day Return Policy.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none"  class="bg-light">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 id="footer" class="font-weight-bold text-uppercase mt-3 mb-4">Information</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">About Us</a>
+          </li>
+          <li>
+            <a href="#!">Delivery Information</a>
+          </li>
+          <li>
+            <a href="#!">Return Policy</a>
+          </li>
+          <li>
+            <a href="#!">Questions</a>
+          </li>
+           <li>
+            <a href="#!">Terms & Conditions</a>
+          </li>
+           <li>
+            <a href="#!">Privacy</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 id="footer" class="font-weight-bold text-uppercase mt-3 mb-4">Customer Service</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Contact Us</a>
+          </li>
+          <li>
+            <a href="#!">Return</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none"  class="bg-light">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 id="footer" class="font-weight-bold text-uppercase mt-3 mb-4">My Accounts</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">My Account</a>
+          </li>
+          <li>
+            <a href="#!">Order History</a>
+          </li>
+          <li>
+            <a href="#!">Gift Vouchers</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr  class="bg-light">
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 id="footer" class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a id="footer" href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+    </li>
+  </ul>
+  <!-- Call to action -->
+
+  <hr class="bg-light">
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <i class="fab fa-facebook-f"> <img class="card-img-top" src="ECOM/static/face.png" width="50px" height="50px"></img></i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1">
+        <i class="fab fa-twitter">  <img class="card-img-top" src="ECOM/static/twit.png" width="50px" height="50px"></img></i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1">
+        <i class="fab fa-linkedin-in">  <img class="card-img-top" src="ECOM/static/lnk.png" width="50px" height="50px"></img></i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <divclass="footer-copyright text-center py-3"><p id="footer">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+{% endblock content%}
